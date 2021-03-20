@@ -21,9 +21,9 @@ package guia_01;
 public class Hora {
 
     //Atributos
-    private int hora=1;
-    private int min=04;
-    private int seg=22;
+    private int hora;
+    private int min;
+    private int seg;
 
     //Constructor
     public Hora(){
@@ -79,7 +79,7 @@ public class Hora {
      */
     public int avanzaSegundo(){
         if(this.seg == 59){
-            this.seg= 00;
+            this.seg= 0;
         }else
         {
             this.seg= this.seg +1;
@@ -92,7 +92,7 @@ public class Hora {
      *  3. Un método que retroceda en 1 segundo y devuelva la instancia del objeto.
      */
     public int retrocedeSegundo(){
-        if(this.seg == 00){
+        if(this.seg == 0){
             this.seg= 59;
         }else
         {
