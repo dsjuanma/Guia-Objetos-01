@@ -84,6 +84,7 @@ public class Cuenta {
         {
             System.out.println("Fondos insuficientes en la cuenta");
         }
+
         return this.balance;
     }
 

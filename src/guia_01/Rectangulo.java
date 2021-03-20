@@ -16,7 +16,6 @@ package guia_01;
  ***************************************************************/
 
 
-
 public class Rectangulo {
 
     private double ancho = 1.0;

@@ -1,7 +1,5 @@
 package guia_01;
-
 import com.sun.xml.internal.bind.v2.runtime.output.StAXExStreamWriterOutput;
-
 import javax.swing.filechooser.FileSystemView;
 import java.io.PrintStream;
 import java.util.Scanner;

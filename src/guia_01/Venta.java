@@ -71,4 +71,5 @@ public class Venta {
         return "ItemVentaa Id " +this.id +" | " + "Description: "+ this.description +" | "  +" Amount: " +  this.cant +" | " + "Unit Price: " + this.price+ " | " + "Total: " + precioFinal()+" | ";
     }
 
+
 }

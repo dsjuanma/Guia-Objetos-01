@@ -84,6 +84,7 @@ public class Hora {
         {
             this.seg= this.seg +1;
         }
+
         return this.seg;
     }
 
