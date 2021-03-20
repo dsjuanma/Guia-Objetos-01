@@ -80,7 +80,12 @@ public class Main {
                     limpiarPantalla();
                     break;
                 case 5:
-
+                    Hora hora = new Hora(13,04,22);
+                    System.out.println("Hora-->" + hora.imprimirHora());
+                    hora.avanzaSegundo();
+                    System.out.println("Hora-->" + hora.imprimirHora());
+                    hora.retrocedeSegundo();
+                    System.out.println("Hora-->" + hora.imprimirHora());
                     Pausa.pausar();
                     limpiarPantalla();
                     break;
