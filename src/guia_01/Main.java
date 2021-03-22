@@ -82,8 +82,10 @@ public class Main {
                     System.out.println("Hora-->" + hora.imprimirHora());
                     hora.avanzaSegundo();
                     System.out.println("Hora-->" + hora.imprimirHora());
-                    hora.retrocedeSegundo();
+                    /*hora.retrocedeSegundo();
                     System.out.println("Hora-->" + hora.imprimirHora());
+                    
+                     */
                     Pausa.pausar();
                     limpiarPantalla();
                     break;

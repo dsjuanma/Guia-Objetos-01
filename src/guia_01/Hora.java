@@ -26,84 +26,112 @@ public class Hora {
     private int seg;
 
     //Constructor
-    public Hora(){
+    public Hora() {
 
     }
 
     //Constructor
-    public Hora(int hora,int min, int seg){
-        this.hora=(hora>= 0 && hora<=24)? hora : 0;
-        this.min=(min>=0 && min<=60)? min : 0;
-        this.seg=(seg>=0 && seg<=60)? seg : 0;
+    public Hora(int hora, int min, int seg) {
+        this.hora = (hora >= 0 && hora <= 24) ? hora : 0;
+        this.min = (min >= 0 && min <= 60) ? min : 0;
+        this.seg = (seg >= 0 && seg <= 60) ? seg : 0;
     }
 
     //Getter y Setter
 
-    public int getHora(){
+    public int getHora() {
         return hora;
     }
 
-    public void setHora(int hora){
-        this.hora=hora;
+    public void setHora(int hora) {
+        this.hora = hora;
     }
 
-    public int getMin(){
+    public int getMin() {
         return min;
     }
-    public void setMin(int min){
-        this.min=min;
+
+    public void setMin(int min) {
+        this.min = min;
     }
 
-    public int getSeg(){
+    public int getSeg() {
         return seg;
     }
-    public void setSeg(int seg){
-        this.seg=seg;
+
+    public void setSeg(int seg) {
+        this.seg = seg;
     }
 
     /*
      * 1. Un método que imprima la hora bajo el siguiente formato hh:mm:ss
      * usando zero a la izquierda ejemplo 13:04:22 .
      */
-    public String imprimirHora(){
+    public String imprimirHora() {
 
-       String hora2 = String.format("%02d",hora);
-       String min2 = String.format("%02d",min);
-       String seg2 = String.format("%02d",seg);
-       return hora2 + ":"+ min2 +":"+ seg2;
+        String hora2 = String.format("%02d", hora);
+        String min2 = String.format("%02d", min);
+        String seg2 = String.format("%02d", seg);
+        return hora2 + ":" + min2 + ":" + seg2;
     }
 
 
     /*
      *  2. Un método que avance en 1 segundo y devuelva la instancia del objeto.
      */
-    public int avanzaSegundo(){
-        if(this.seg == 59){
-            this.seg= 0;
-        }else
-        {
-            this.seg= this.seg +1;
+    public void avanzarHora() {
+        if (this.hora == 23) {
+            this.hora = 0;
+        } else {
+            this.hora++;
         }
+    }
 
-        return this.seg;
+    public void avanzarMinuto() {
+        if(this.min == 59) {
+            this.min = 0;
+            avanzarHora();
+        }else {
+            this.min++;
+        }
+    }
+
+    public void avanzaSegundo() {
+        if(this.seg == 59) {
+            this.seg = 0;
+            avanzarMinuto();
+        }else {
+            this.seg++;
+        }
     }
 
 
     /*
      *  3. Un método que retroceda en 1 segundo y devuelva la instancia del objeto.
      */
-    public int retrocedeSegundo(){
-        if(this.seg == 0){
-            this.seg= 59;
-        }else
-        {
-            this.seg= this.seg -1;
+    public void retrocederHora() {
+        if (this.hora == 0) {
+            this.hora = 23;
+        } else {
+            this.hora--;
         }
-        return this.seg;
     }
 
+    public void retrocederMinuto() {
+        if (this.min == 0) {
+            this.min = 59;
+            retrocederHora();
+        } else {
+            this.min--;
+        }
+    }
 
-
-
-
+    public void retrocederSegundo() {
+        if (this.seg == 0) {
+            this.seg = 59;
+            retrocederMinuto();
+        } else {
+            this.seg--;
+        }
+    }
 }
