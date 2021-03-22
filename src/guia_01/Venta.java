@@ -17,58 +17,65 @@ package guia_01;
 public class Venta {
 
     //Atributos
-    private int id ;
+    private int id;
     private String description;
     private int cant;
     private double price;
-   // private double preciofinal;
+    // private double preciofinal;
 
     //Constructor
-    public Venta (){
+    public Venta() {
 
     }
+
     //Constructor
-    public Venta(int id, String description, int cant, double price){
-        this.id= id;
-        this.description=description;
-        this.cant=cant;
-        this.price=price;
+    public Venta(int id, String description, int cant, double price) {
+        this.id = id;
+        this.description = description;
+        this.cant = cant;
+        this.price = price;
 
     }
+
     //getters y setters
-    public int getId(){
+    public int getId() {
         return id;
     }
-    public void setId(int id){
-        this.id=id;
+
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getDescription(){
+    public String getDescription() {
         return description;
     }
-    public void setDescription(String description){
-        this.description=description;
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getCant() {
         return cant;
     }
-    public void setCant(int cant){
-        this.cant=cant;
+
+    public void setCant(int cant) {
+        this.cant = cant;
     }
 
     public double getPrice() {
         return price;
     }
-    public void setPrice(double price){
-        this.price=price;
+
+    public void setPrice(double price) {
+        this.price = price;
     }
-    public double precioFinal(){
+
+    public double precioFinal() {
         return this.cant * this.price;
     }
 
-    public String muestraCompra(){
-        return "ItemVentaa Id " +this.id +" | " + "Description: "+ this.description +" | "  +" Amount: " +  this.cant +" | " + "Unit Price: " + this.price+ " | " + "Total: " + precioFinal()+" | ";
+    public String muestraCompra() {
+        return "ItemVentaa Id " + this.id + " | " + "Description: " + this.description + " | " + " Amount: " + this.cant + " | " + "Unit Price: " + this.price + " | " + "Total: " + precioFinal() + " | ";
     }
 
 

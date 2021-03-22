@@ -31,34 +31,39 @@ public class Cuenta {
     private double balance;
 
     //Constructor
-    public Cuenta(){
+    public Cuenta() {
 
     }
-    public Cuenta(int id, String name, double balance){
-        this.id=id;
-        this.name=name;
-        this.balance=balance;
+
+    public Cuenta(int id, String name, double balance) {
+        this.id = id;
+        this.name = name;
+        this.balance = balance;
     }
+
     //Getter y Setter
-    public int getId(){
+    public int getId() {
         return id;
     }
-    public void setId(int id){
-        this.id=id;
+
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public void setName(String name){
-        this.name=name;
+
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public double getBalance(){
+    public double getBalance() {
         return balance;
     }
-    public  void setBalance(double balance){
-        this.balance=balance;
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     /*
@@ -67,21 +72,20 @@ public class Cuenta {
      */
 
 
-    public double deposito(double dinero){
+    public double deposito(double dinero) {
         return this.balance = this.balance + dinero;
     }
-   /*
-    *  b. El método débito que representa una sustracción de dinero de la cuenta.
-    *     Este método debe devolver el balance luego de la operación. Si el dinero en
-    *     la cuenta no es suficiente para cubrir la sustracción, se debe imprimir por
-    *     pantalla un aviso.
-    */
+    /*
+     *  b. El método débito que representa una sustracción de dinero de la cuenta.
+     *     Este método debe devolver el balance luego de la operación. Si el dinero en
+     *     la cuenta no es suficiente para cubrir la sustracción, se debe imprimir por
+     *     pantalla un aviso.
+     */
 
-    public double debito(double retiro){
-        if(this.balance>= retiro){
+    public double debito(double retiro) {
+        if (this.balance >= retiro) {
             this.balance = this.balance - retiro;
-        }else
-        {
+        } else {
             System.out.println("Fondos insuficientes en la cuenta");
         }
 
@@ -99,7 +103,7 @@ public class Cuenta {
      *     correcto.
      */
 
-    public String muestraCuenta(){
+    public String muestraCuenta() {
         return "Cuenta Nro: " + this.id + "\n" + "Nombre Usuario: " + this.name + "\n" + "Saldo: " + this.balance;
     }
 

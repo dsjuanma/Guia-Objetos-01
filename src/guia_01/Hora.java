@@ -1,7 +1,6 @@
 package guia_01;
 
 
-
 /****************************************************************
  *
  * 5 Modele el objeto Hora, teniendo en cuenta sus atributos, hora, minuto y segundo.
@@ -88,19 +87,19 @@ public class Hora {
     }
 
     public void avanzarMinuto() {
-        if(this.min == 59) {
+        if (this.min == 59) {
             this.min = 0;
             avanzarHora();
-        }else {
+        } else {
             this.min++;
         }
     }
 
     public void avanzaSegundo() {
-        if(this.seg == 59) {
+        if (this.seg == 59) {
             this.seg = 0;
             avanzarMinuto();
-        }else {
+        } else {
             this.seg++;
         }
     }

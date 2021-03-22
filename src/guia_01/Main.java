@@ -1,5 +1,7 @@
 package guia_01;
+
 import com.sun.xml.internal.bind.v2.runtime.output.StAXExStreamWriterOutput;
+
 import javax.swing.filechooser.FileSystemView;
 import java.io.PrintStream;
 import java.util.Scanner;
@@ -14,7 +16,7 @@ public class Main {
 
         do {
             selected = menu();
-            switch(selected) {
+            switch (selected) {
                 case 1:
                     Rectangulo rectangulo = new Rectangulo();
                     System.out.println("Ancho: " + rectangulo.getAncho());
@@ -29,26 +31,26 @@ public class Main {
                     limpiarPantalla();
                     break;
                 case 2:
-                    Empleado empleado1 = new Empleado();
-                    Empleado empleado2 = new Empleado();
-                    empleado1.setDni(23456345);
-                    empleado1.setNombre("Carlos");
-                    empleado1.setApellido("Gutiérrez");
-                    empleado1.setSalario(25000);
-                    empleado1.aumentaSalario(15);
+                    Empleado carlosGutierrez = new Empleado();
+                    Empleado anaSanchez = new Empleado();
+                    carlosGutierrez.setDni(23456345);
+                    carlosGutierrez.setNombre("Carlos");
+                    carlosGutierrez.setApellido("Gutiérrez");
+                    carlosGutierrez.setSalario(25000);
+                    carlosGutierrez.aumentaSalario(15);
 
                     System.out.println("----------------------------------------------------------------------------------");
-                    System.out.println("| Empleado |" + empleado1.muestraEmpleado());
+                    System.out.println("| Empleado |" + carlosGutierrez.muestraEmpleado());
                     System.out.println("----------------------------------------------------------------------------------");
 
-                    System.out.println("Salario Anual del Empleado:  "+ empleado1.getNombre() + " " + empleado1.getApellido() +" $" + empleado1.calcSalarioAnual());
+                    System.out.println("Salario Anual del Empleado:  " + carlosGutierrez.getNombre() + " " + carlosGutierrez.getApellido() + " $" + carlosGutierrez.calcSalarioAnual());
 
-                    empleado2.setDni(34234123);
-                    empleado2.setNombre("Ana");
-                    empleado2.setApellido("Sánchez");
-                    empleado2.setSalario(27500);
+                    anaSanchez.setDni(34234123);
+                    anaSanchez.setNombre("Ana");
+                    anaSanchez.setApellido("Sánchez");
+                    anaSanchez.setSalario(27500);
                     System.out.println("---------------------------------------------------------------------------");
-                    System.out.println("| Empleado | " + empleado2.muestraEmpleado());
+                    System.out.println("| Empleado | " + anaSanchez.muestraEmpleado());
                     System.out.println("---------------------------------------------------------------------------");
 
                     Pausa.pausar();
@@ -56,8 +58,8 @@ public class Main {
                     break;
                 case 3:
                     System.out.println("Compras: ");
-                    Venta venta1 = new Venta(1,"Leche de Almendra",3,20);
-                    Venta venta2 = new Venta(2,"Nesquick",2,43);
+                    Venta venta1 = new Venta(1, "Leche de Almendra", 3, 20);
+                    Venta venta2 = new Venta(2, "Nesquick", 2, 43);
                     System.out.println("" + venta1.muestraCompra());
                     System.out.println("" + venta2.muestraCompra());
 
@@ -65,12 +67,12 @@ public class Main {
                     limpiarPantalla();
                     break;
                 case 4:
-                    Cuenta cuenta = new Cuenta(1,"Pepe grillo",15000);
+                    Cuenta cuenta = new Cuenta(1, "Pepe grillo", 15000);
                     System.out.println("" + cuenta.muestraCuenta());
                     cuenta.deposito(2500);
                     System.out.println("Se realiza un Deposito por $2500" + " Nuevo Saldo: " + cuenta.getBalance());
                     cuenta.deposito(1500);
-                    System.out.println("Se realiza un Deposito por $1500" + " Nuevo Saldo: " +cuenta.getBalance());
+                    System.out.println("Se realiza un Deposito por $1500" + " Nuevo Saldo: " + cuenta.getBalance());
                     System.out.println("Se quiere realiza una compra por $30000");
                     cuenta.debito(30000);
 
@@ -78,7 +80,7 @@ public class Main {
                     limpiarPantalla();
                     break;
                 case 5:
-                    Hora hora = new Hora(13,04,22);
+                    Hora hora = new Hora(13, 04, 22);
                     System.out.println("Hora-->" + hora.imprimirHora());
                     hora.avanzaSegundo();
                     System.out.println("Hora-->" + hora.imprimirHora());
@@ -101,7 +103,7 @@ public class Main {
                     limpiarPantalla();
                     break;
             }
-        }while(selected !=0);
+        } while (selected != 0);
     }
 
 
@@ -132,7 +134,7 @@ public class Main {
 
 
     public static void limpiarPantalla() {         // se dejan 60 espacios creando una especie de cls de la consola
-        for(int i=0;i<2;i++) {
+        for (int i = 0; i < 2; i++) {
             System.out.println("\n");
         }
     }
